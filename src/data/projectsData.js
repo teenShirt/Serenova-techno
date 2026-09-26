@@ -1,0 +1,50 @@
+export const projectsData = [
+  {
+    id: 1,
+    slug: "e-commerce-nginx-ssl-hardening",
+    title: "E-Commerce Nginx Server Optimization & Security Hardening",
+    category: "Nginx & Web Hosting",
+    serviceCategory: "Nginx and Web Hosting Support",
+    clientType: "International E-Commerce Business",
+    image: "/assets/project-cloud.jpg",
+    summary: "Reconfigured high-traffic Nginx web server, resolved 502 gateway timeouts, and automated SSL certificate security.",
+    challenge: "The client suffered frequent 502 Bad Gateway crashes during promotional email campaigns and slow SSL handshake latency.",
+    solution: "Tuned Nginx keepalive parameters, optimized PHP-FPM process pool limits, enabled FastCGI caching, and configured automated Certbot SSL renewal.",
+    result: "Eliminated server crashes, reduced average page response time from 1.8s to 320ms, and achieved 100% uptime during flash sales.",
+    techStack: ["Nginx", "Ubuntu 24.04", "PHP-FPM", "Certbot SSL", "FastCGI Cache"],
+    completionDate: "May 2026",
+    isFeatured: 1
+  },
+  {
+    id: 2,
+    slug: "agency-cloud-vps-migration",
+    title: "Digital Agency VPS Server Consolidation & Backup Architecture",
+    category: "Cloud Infrastructure",
+    serviceCategory: "Cloud Server Setup and Management",
+    clientType: "Digital Marketing & Web Agency",
+    image: "/assets/project-devops.jpg",
+    summary: "Consolidated 14 client websites onto isolated DigitalOcean droplets with automated off-site database backups and firewall rules.",
+    challenge: "The agency managed scattered web hosting accounts across multiple providers with no central backup or security policy.",
+    solution: "Designed unified Linux cloud server environment with Docker container isolation, UFW firewall restriction, and daily automated encrypted backups to S3 storage.",
+    result: "Reduced monthly server hosting costs by 35% and established a dependable recovery timeline under 15 minutes.",
+    techStack: ["DigitalOcean", "Docker", "UFW Firewall", "AWS S3", "Bash Scripts"],
+    completionDate: "July 2026",
+    isFeatured: 1
+  },
+  {
+    id: 3,
+    slug: "sri-lankan-small-business-it-setup",
+    title: "Sri Lankan Local Business Network & Server Infrastructure Deployment",
+    category: "Linux & Network Support",
+    serviceCategory: "Network Setup and Troubleshooting",
+    clientType: "Sri Lankan Small Business",
+    image: "/assets/project-cyber.jpg",
+    summary: "Configured secure local server infrastructure, shared storage, local network routing, and remote WireGuard VPN access.",
+    challenge: "Insecure local network with intermittent connectivity issues and no structured file permissions for team members.",
+    solution: "Deployed Ubuntu local file server with Samba network shares, configured router firewall rules, and created WireGuard VPN access for remote staff.",
+    result: "Established fast, reliable local network access and secure remote working capability for 18 staff members.",
+    techStack: ["Ubuntu Server", "Samba", "WireGuard VPN", "TCP/IP Router", "UFW"],
+    completionDate: "August 2026",
+    isFeatured: 1
+  }
+];

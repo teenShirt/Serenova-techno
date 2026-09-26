@@ -1,0 +1,84 @@
+:root {
+  /* Color Palette - Deep Navy Atmosphere & Vibrant Blue Accents */
+  --bg-darkest: #070B14;
+  --bg-dark: #0B1120;
+  --bg-card: #0F172A;
+  --bg-card-hover: #1E293B;
+  --bg-glass: rgba(15, 23, 42, 0.75);
+  --bg-glass-card: rgba(30, 41, 59, 0.5);
+  --bg-glass-input: rgba(15, 23, 42, 0.85);
+
+  /* Primary Brand Colors */
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-accent: #3B82F6;
+  --color-cyan: #38BDF8;
+  --color-electric: #60A5FA;
+  --color-glow: rgba(59, 130, 246, 0.4);
+  --color-cyan-glow: rgba(56, 189, 248, 0.3);
+
+  /* Text Colors */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-accent: #38BDF8;
+
+  /* Status Colors */
+  --color-success: #10B981;
+  --color-success-bg: rgba(16, 185, 129, 0.15);
+  --color-error: #EF4444;
+  --color-error-bg: rgba(239, 68, 68, 0.15);
+
+  /* Borders & Dividers */
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glass-hover: rgba(56, 189, 248, 0.35);
+  --border-accent: rgba(37, 99, 235, 0.5);
+
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Font Sizes */
+  --fs-xs: 0.75rem;    /* 12px */
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-base: 1rem;     /* 16px */
+  --fs-lg: 1.125rem;   /* 18px */
+  --fs-xl: 1.25rem;    /* 20px */
+  --fs-2xl: 1.5rem;    /* 24px */
+  --fs-3xl: 1.875rem;  /* 30px */
+  --fs-4xl: 2.25rem;   /* 36px */
+  --fs-5xl: 3rem;      /* 48px */
+  --fs-6xl: 3.75rem;   /* 60px */
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 0.75rem;  /* 12px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;     /* 32px */
+  --spacing-2xl: 3rem;    /* 48px */
+  --spacing-3xl: 4.5rem;  /* 72px */
+  --spacing-4xl: 6rem;    /* 96px */
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows & Glass */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 30px rgba(37, 99, 235, 0.25);
+  --shadow-cyan-glow: 0 0 35px rgba(56, 189, 248, 0.2);
+  --backdrop-blur: blur(16px);
+
+  /* Container Max Width & Layout Sizes */
+  --max-width: 1440px;
+  --header-height: 76px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
