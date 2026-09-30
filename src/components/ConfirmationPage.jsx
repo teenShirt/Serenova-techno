@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CheckCircle2, ShieldCheck, Mail, Phone, ArrowLeft, Calendar } from 'lucide-react';
+import { companyInfo } from '../data/companyInfo';
 
 export default function ConfirmationPage() {
   const { refNumber } = useParams();
@@ -57,7 +58,7 @@ export default function ConfirmationPage() {
             </Link>
 
             <a
-              href={`mailto:contact@serenovatech.com?subject=Enquiry Reference: ${refNumber}`}
+              href={`mailto:${companyInfo.email}?subject=Enquiry Reference: ${refNumber}`}
               className="btn btn-outline btn-lg"
               style={{ textDecoration: 'none' }}
             >

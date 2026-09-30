@@ -90,11 +90,15 @@ export default function Footer({ onOpenPolicy }) {
             <ul className="footer-links" style={{ gap: '12px' }}>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#94A3B8', fontSize: '0.85rem' }}>
                 <Mail size={16} style={{ color: '#38BDF8', flexShrink: 0 }} />
-                <span>{companyInfo.email}</span>
+                <a href={`mailto:${companyInfo.email}`} style={{ color: '#94A3B8', textDecoration: 'none', transition: 'color 0.2s' }}>
+                  {companyInfo.email}
+                </a>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#94A3B8', fontSize: '0.85rem' }}>
                 <Phone size={16} style={{ color: '#38BDF8', flexShrink: 0 }} />
-                <span>{companyInfo.phone}</span>
+                <a href={`tel:${companyInfo.phone}`} style={{ color: '#94A3B8', textDecoration: 'none', transition: 'color 0.2s' }}>
+                  {companyInfo.phone}
+                </a>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', color: '#94A3B8', fontSize: '0.85rem' }}>
                 <MapPin size={16} style={{ color: '#38BDF8', flexShrink: 0, marginTop: '2px' }} />

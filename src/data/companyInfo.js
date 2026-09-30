@@ -5,10 +5,10 @@ export const companyInfo = {
   businessType: "IT services and technology solutions",
   mainGoal: "Present our services professionally and encourage visitors to request a consultation.",
   
-  // Contact details - with clear placeholding indicator notes
-  email: "contact@serenovatech.com", // [EMAIL PLACEHOLDER]
-  phone: "+1 (800) 555-0199", // [PHONE NUMBER / WHATSAPP PLACEHOLDER]
-  whatsapp: "+1 (800) 555-0199",
+  // Contact details
+  email: "techserenova@gmail.com",
+  phone: "0770039536",
+  whatsapp: "0770039536",
   address: "100 Technology Plaza, Suite 400, Innovation District, CA 94105", // [ADDRESS PLACEHOLDER]
   businessHours: "Monday - Friday: 8:00 AM - 6:00 PM (EST) | 24/7 Emergency Support Available",
   

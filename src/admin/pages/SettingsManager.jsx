@@ -6,9 +6,9 @@ export default function SettingsManager() {
   const [settings, setSettings] = useState({
     name: 'Serenova Tech',
     tagline: 'Smart Technology. Better Solutions.',
-    email: 'contact@serenovatech.com',
-    phone: '+1 (800) 555-0199',
-    whatsapp: '+1 (800) 555-0199',
+    email: 'techserenova@gmail.com',
+    phone: '0770039536',
+    whatsapp: '0770039536',
     address: '100 Technology Plaza, Suite 400, Innovation District, CA 94105',
     businessHours: 'Monday - Friday: 8:00 AM - 6:00 PM (EST)',
     linkedin: 'https://linkedin.com/company/serenova-tech',

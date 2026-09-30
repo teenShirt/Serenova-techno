@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../admin/services/api';
+import { companyInfo } from '../data/companyInfo';
 import { Send, CheckCircle2, ShieldCheck, Mail, Phone, MessageSquare, AlertCircle } from 'lucide-react';
 
 export default function ContactSection({ showToast, initialService = '' }) {
@@ -298,8 +299,8 @@ export default function ContactSection({ showToast, initialService = '' }) {
                   </div>
                   <div>
                     <div style={{ fontSize: '0.75rem', color: '#94A3B8' }}>Email Enquiries</div>
-                    <a href="mailto:contact@serenovatech.com" style={{ color: '#38BDF8', textDecoration: 'none', fontWeight: '600' }}>
-                      contact@serenovatech.com
+                    <a href={`mailto:${companyInfo.email}`} style={{ color: '#38BDF8', textDecoration: 'none', fontWeight: '600' }}>
+                      {companyInfo.email}
                     </a>
                   </div>
                 </div>
@@ -310,8 +311,8 @@ export default function ContactSection({ showToast, initialService = '' }) {
                   </div>
                   <div>
                     <div style={{ fontSize: '0.75rem', color: '#94A3B8' }}>Phone / WhatsApp</div>
-                    <a href="https://wa.me/94770000000" target="_blank" rel="noopener noreferrer" style={{ color: '#10B981', textDecoration: 'none', fontWeight: '600' }}>
-                      +94 77 000 0000
+                    <a href={`tel:${companyInfo.phone}`} target="_blank" rel="noopener noreferrer" style={{ color: '#10B981', textDecoration: 'none', fontWeight: '600' }}>
+                      {companyInfo.phone}
                     </a>
                   </div>
                 </div>
