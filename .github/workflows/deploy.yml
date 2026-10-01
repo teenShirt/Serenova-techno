@@ -56,7 +56,7 @@ jobs:
             echo "Starting deployment on server..."
             
             # Navigate to project directory on server
-            cd /var/www/serenova-tech || exit 1
+            cd /opt/sernova/Serenova-techno || exit 1
             
             # Pull latest changes from GitHub
             git pull origin main
