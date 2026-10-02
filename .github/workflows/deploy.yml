@@ -1,6 +1,5 @@
-name: CI/CD Pipeline - Deploy to VPS
+name: CI/CD Pipeline - Deploy Serenova Tech
 
-# 1. Triggers: Run pipeline automatically when pushing code to the 'main' branch
 on:
   push:
     branches:
@@ -10,64 +9,53 @@ on:
       - main
 
 jobs:
-  # Stage 1: Continuous Integration (CI) - Test & Build
   build-and-test:
-    name: 🏗️ Build & Test
+    name: Build & Test
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout repository code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🟢 Setup Node.js environment
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
 
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: 🔍 Run Linter (Code Quality Check)
+      - name: Run linter
         run: npm run lint || echo "Linter warning ignored"
 
-      - name: 🏗️ Build React Frontend
+      - name: Build React frontend
         run: npm run build
 
-  # Stage 2: Continuous Deployment (CD) - Deploy to Linux Server via SSH
   deploy:
-    name: 🚀 Deploy to VPS Server
-    needs: build-and-test # Only runs if build-and-test stage succeeds
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
+    name: Deploy to VMware Server
+    needs: build-and-test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    runs-on:
+      - self-hosted
+      - Linux
+      - X64
 
     steps:
-      - name: 📥 Checkout repository code
-        uses: actions/checkout@v4
+      - name: Deploy Serenova Tech
+        run: |
+          echo "Starting deployment..."
 
-      - name: 🔑 Deploy via SSH to VPS
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          port: ${{ secrets.SERVER_PORT || 22 }}
-          script: |
-            echo "Starting deployment on server..."
-            
-            # Navigate to project directory on server
-            cd /opt/sernova/Serenova-techno || exit 1
-            
-            # Pull latest changes from GitHub
-            git pull origin main
-            
-            # Install dependencies
-            npm ci
-            
-            # Build React frontend
-            npm run build
-            
-            # Reload PM2 application seamlessly (zero downtime)
-            pm2 reload ecosystem.config.cjs --env production --update-env
-            
-            echo "✅ Deployment completed successfully!"
+          cd /opt/sernova/Serenova-techno
+
+          git fetch origin
+          git reset --hard origin/main
+
+          npm ci
+          npm run build
+
+          pm2 reload ecosystem.config.cjs --env production --update-env
+          pm2 save
+
+          echo "Deployment completed successfully!"
